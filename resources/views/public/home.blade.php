@@ -25,17 +25,18 @@
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="/lapor-kehilangan" class="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-slate-800 transition-all shadow-xl shadow-slate-200 flex items-center justify-center gap-2 group">
-                    <i data-lucide="frown" class="w-5 h-5 group-hover:rotate-12 transition-transform"></i>
+                    <i data-lucide="" class="w-5 h-5 group-hover:rotate-12 transition-transform"></i>
                     Saya Kehilangan Barang
                 </a>
-                <a href="/lapor-temuan" class="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 border-2 border-slate-200 rounded-2xl font-bold hover:bg-slate-50 transition-all flex items-center justify-center gap-2">
-                    <i data-lucide="smile" class="w-5 h-5 text-emerald-500"></i>
+                <a href="/lapor-temuan" class="w-full sm:w-auto px-8 py-4 bg-white text-slate-900 border-2 border-slate-200 rounded-2xl font-bold hover:bg-slate-50 transition-all flex items-center justify-center gap-2 group">
+                    <i data-lucide="" class="w-5 h-5 text-emerald-500 group-hover:scale-110 transition-transform"></i>
                     Saya Menemukan Barang
                 </a>
             </div>
         </div>
     </div>
 
+    {{-- Section Cara Kerja tetap sama seperti kode sebelumnya --}}
     <div class="bg-white border-y border-slate-100 py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -49,20 +50,16 @@
                         <i data-lucide="file-text" class="w-6 h-6"></i>
                     </div>
                     <h4 class="text-xl font-bold text-slate-900 mb-3">1. Isi Form Laporan</h4>
-                    <p class="text-slate-500 text-sm leading-relaxed">
-                        Lengkapi detail barang mulai dari nama, lokasi terakhir, hingga foto bukti pendukung yang jelas.
-                    </p>
+                    <p class="text-slate-500 text-sm leading-relaxed">Lengkapi detail barang mulai dari nama, lokasi terakhir, hingga foto bukti pendukung yang jelas.</p>
                     <div class="absolute top-8 right-8 text-slate-200 text-5xl font-black">01</div>
                 </div>
 
                 <div class="relative p-8 rounded-3xl bg-slate-50 border border-slate-100 group hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500">
                     <div class="w-14 h-14 bg-amber-500 text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-amber-200 transition-transform group-hover:-rotate-6">
-                        <i data-lucide="clock" class="w-6 h-6"></i>
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
                     </div>
                     <h4 class="text-xl font-bold text-slate-900 mb-3">2. Tunggu Verifikasi</h4>
-                    <p class="text-slate-500 text-sm leading-relaxed">
-                        Admin akan memeriksa laporan Anda untuk memastikan validitas data sebelum dipublikasikan ke publik.
-                    </p>
+                    <p class="text-slate-500 text-sm leading-relaxed">Admin akan memeriksa laporan Anda untuk memastikan validitas data sebelum dipublikasikan.</p>
                     <div class="absolute top-8 right-8 text-slate-200 text-5xl font-black">02</div>
                 </div>
 
@@ -71,9 +68,7 @@
                         <i data-lucide="check-circle-2" class="w-6 h-6"></i>
                     </div>
                     <h4 class="text-xl font-bold text-slate-900 mb-3">3. Selesai & Ambil</h4>
-                    <p class="text-slate-500 text-sm leading-relaxed">
-                        Jika klaim disetujui, Anda dapat mengambil barang sesuai dengan instruksi dan jadwal dari pihak admin.
-                    </p>
+                    <p class="text-slate-500 text-sm leading-relaxed">Jika klaim disetujui, Anda dapat mengambil barang sesuai dengan instruksi admin.</p>
                     <div class="absolute top-8 right-8 text-slate-200 text-5xl font-black">03</div>
                 </div>
             </div>

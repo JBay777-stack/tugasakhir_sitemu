@@ -31,7 +31,6 @@
         </div>
     </div>
 
-    {{-- Table --}}
     <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden animate-slide-up" style="animation-delay: 0.1s">
         <div class="overflow-x-auto">
             <table class="w-full text-left border-collapse">

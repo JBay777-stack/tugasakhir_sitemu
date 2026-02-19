@@ -32,6 +32,50 @@
             </div>
 
             <div class="space-y-2">
+                <label class="block text-sm font-bold text-slate-700 ml-1">Status</label>
+                <select name="status_pengklaim" id="status_pengklaim" onchange="toggleStudentFields()" required
+                    class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-4 focus:ring-brand-600/10 focus:border-brand-600 transition-all text-slate-700">
+                    <option value="" disabled selected>Pilih Status...</option>
+                    <option value="Siswa">Siswa</option>
+                    <option value="Guru">Guru</option>
+                    <option value="Karyawan">Karyawan</option>
+                </select>
+            </div>
+
+            <div id="student_fields" class="grid grid-cols-1 md:grid-cols-2 gap-5 hidden">
+                <div class="space-y-2">
+                    <label class="block text-sm font-bold text-slate-700 ml-1">Kelas</label>
+                    <select name="kelas" id="kelas_input"
+                        class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-4 focus:ring-brand-600/10 focus:border-brand-600 transition-all text-slate-700">
+                        <option value="" disabled selected>Pilih Kelas...</option>
+                        <option value="X">X</option>
+                        <option value="XI">XI</option>
+                        <option value="XII">XII</option>
+                    </select>
+                </div>
+                <div class="space-y-2">
+                    <label class="block text-sm font-bold text-slate-700 ml-1">Jurusan</label>
+                    <select name="jurusan" id="jurusan_input"
+                        class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-4 focus:ring-brand-600/10 focus:border-brand-600 transition-all text-slate-700">
+                        <option value="" disabled selected>Pilih Jurusan...</option>
+                        <option value="" disabled selected>Pilih Jurusan...</option>
+                            <option value="RPL">RPL 1</option>
+                            <option value="RPL">RPL 2</option>
+                            <option value="RPL">RPL 3</option>
+                            <option value="APHP">APHP 1</option>
+                            <option value="APHP">APHP 2</option>
+                            <option value="DKV">DKV 1</option>
+                            <option value="DKV">DKV 2</option>
+                            <option value="KULINER">KULINER 1</option>
+                            <option value="KULINER">KULINER 2</option>
+                            <option value="KULINER">KULINER 3</option>
+                            <option value="PS">PS 1</option>
+                            <option value="PS">PS 2</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="space-y-2">
                 <label class="block text-sm font-bold text-slate-700 ml-1">Nomor WhatsApp / Kontak</label>
                 <div class="relative group">
                     <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-brand-600 transition-colors">
@@ -94,6 +138,23 @@
             }
 
             reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    function toggleStudentFields() {
+        const status = document.getElementById('status_pengklaim').value;
+        const studentFields = document.getElementById('student_fields');
+        const kelasInput = document.getElementById('kelas_input');
+        const jurusanInput = document.getElementById('jurusan_input');
+
+        if (status === 'Siswa') {
+            studentFields.classList.remove('hidden');
+            kelasInput.setAttribute('required', 'required');
+            jurusanInput.setAttribute('required', 'required');
+        } else {
+            studentFields.classList.add('hidden');
+            kelasInput.removeAttribute('required');
+            jurusanInput.removeAttribute('required');
         }
     }
 

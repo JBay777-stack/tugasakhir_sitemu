@@ -10,7 +10,8 @@
             <p class="text-slate-500 max-w-2xl mx-auto text-lg">Cari barang Anda yang hilang atau bantu kembalikan barang yang Anda temukan di sini.</p>
         </div>
 
-        <section class="space-y-6">
+        {{-- Section Barang Hilang --}}
+        <section id="hilang" class="space-y-6 scroll-mt-24">
             <div class="flex items-center justify-between border-b border-slate-200 pb-4">
                 <div class="flex items-center gap-3">
                     <div class="p-2 bg-orange-100 rounded-lg text-orange-600">
@@ -62,7 +63,8 @@
             @endif
         </section>
 
-        <section class="space-y-6">
+        {{-- Section Barang Temuan --}}
+        <section id="temuan" class="space-y-6 scroll-mt-24 pt-10">
             <div class="flex items-center justify-between border-b border-slate-200 pb-4">
                 <div class="flex items-center gap-3">
                     <div class="p-2 bg-emerald-100 rounded-lg text-emerald-600">

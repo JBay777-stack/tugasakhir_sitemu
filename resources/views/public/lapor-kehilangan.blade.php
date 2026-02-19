@@ -29,12 +29,56 @@
                             class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-4 focus:ring-orange-500/10 focus:border-orange-500 transition-all placeholder:text-slate-400"
                             placeholder="Nama lengkap Anda">
                     </div>
+
                     <div class="space-y-2">
-                        <label class="block text-sm font-bold text-slate-700 ml-1">WhatsApp / Kontak</label>
-                        <input type="text" name="kontak" required
-                            class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-4 focus:ring-orange-500/10 focus:border-orange-500 transition-all placeholder:text-slate-400"
-                            placeholder="Contoh: 0812xxxx">
+                        <label class="block text-sm font-bold text-slate-700 ml-1">Status</label>
+                        <select name="status_pelapor" id="status_pelapor" onchange="toggleStudentFields()" required
+                            class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-4 focus:ring-orange-500/10 focus:border-orange-500 transition-all text-slate-700">
+                            <option value="" disabled selected>Pilih Status...</option>
+                            <option value="Siswa">Siswa</option>
+                            <option value="Guru">Guru</option>
+                            <option value="Karyawan">Karyawan</option>
+                        </select>
                     </div>
+                </div>
+
+                <div id="student_fields" class="grid grid-cols-1 md:grid-cols-2 gap-5 hidden">
+                    <div class="space-y-2">
+                        <label class="block text-sm font-bold text-slate-700 ml-1">Kelas</label>
+                        <select name="kelas" id="kelas_input"
+                            class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-4 focus:ring-orange-500/10 focus:border-orange-500 transition-all text-slate-700">
+                            <option value="" disabled selected>Pilih Kelas...</option>
+                            <option value="X">X</option>
+                            <option value="XI">XI</option>
+                            <option value="XII">XII</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="block text-sm font-bold text-slate-700 ml-1">Jurusan</label>
+                        <select name="jurusan" id="jurusan_input"
+                            class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-4 focus:ring-orange-500/10 focus:border-orange-500 transition-all text-slate-700">
+                            <option value="" disabled selected>Pilih Jurusan...</option>
+                            <option value="RPL">RPL 1</option>
+                            <option value="RPL">RPL 2</option>
+                            <option value="RPL">RPL 3</option>
+                            <option value="APHP">APHP 1</option>
+                            <option value="APHP">APHP 2</option>
+                            <option value="DKV">DKV 1</option>
+                            <option value="DKV">DKV 2</option>
+                            <option value="KULINER">KULINER 1</option>
+                            <option value="KULINER">KULINER 2</option>
+                            <option value="KULINER">KULINER 3</option>
+                            <option value="PS">PS 1</option>
+                            <option value="PS">PS 2</option>
+                            </select>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="block text-sm font-bold text-slate-700 ml-1">WhatsApp / Kontak</label>
+                    <input type="text" name="kontak" required
+                        class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-4 focus:ring-orange-500/10 focus:border-orange-500 transition-all placeholder:text-slate-400"
+                        placeholder="Contoh: 0812xxxx">
                 </div>
             </div>
 
@@ -45,11 +89,18 @@
                 </div>
 
                 <div class="space-y-5">
-                    <div class="space-y-2">
-                        <label class="block text-sm font-bold text-slate-700 ml-1">Nama Barang</label>
-                        <input type="text" name="nama_barang" required
-                            class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-4 focus:ring-orange-500/10 focus:border-orange-500 transition-all placeholder:text-slate-400"
-                            placeholder="Apa barang yang hilang?">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-slate-700 ml-1">Nama Barang</label>
+                            <input type="text" name="nama_barang" required
+                                class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-4 focus:ring-orange-500/10 focus:border-orange-500 transition-all placeholder:text-slate-400"
+                                placeholder="Apa barang yang hilang?">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-slate-700 ml-1">Tanggal Laporan Kehilangan</label>
+                            <input type="date" name="tanggal_kehilangan" required
+                                class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:ring-4 focus:ring-orange-500/10 focus:border-orange-500 transition-all text-slate-700">
+                        </div>
                     </div>
 
                     <div class="space-y-2">
@@ -90,9 +141,6 @@
                     <i data-lucide="megaphone" class="w-5 h-5 transition-transform group-hover:rotate-12"></i>
                     Kirim Laporan Kehilangan
                 </button>
-                <p class="text-center text-[11px] text-slate-400 mt-4 italic">
-                    Laporan akan diverifikasi admin sebelum tampil di Daftar Barang.
-                </p>
             </div>
         </form>
     </div>
@@ -105,6 +153,23 @@
             label.textContent = input.files[0].name;
             label.classList.remove('text-slate-400');
             label.classList.add('text-slate-700', 'font-medium');
+        }
+    }
+
+    function toggleStudentFields() {
+        const status = document.getElementById('status_pelapor').value;
+        const studentFields = document.getElementById('student_fields');
+        const kelasInput = document.getElementById('kelas_input');
+        const jurusanInput = document.getElementById('jurusan_input');
+
+        if (status === 'Siswa') {
+            studentFields.classList.remove('hidden');
+            kelasInput.setAttribute('required', 'required');
+            jurusanInput.setAttribute('required', 'required');
+        } else {
+            studentFields.classList.add('hidden');
+            kelasInput.removeAttribute('required');
+            jurusanInput.removeAttribute('required');
         }
     }
 

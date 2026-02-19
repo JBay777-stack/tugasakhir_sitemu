@@ -99,7 +99,7 @@ class DashboardController extends Controller
         return $pdf->download('Surat-Pernyataan.pdf');
     }
 
-    //belom jelas
+
     public function rekapKehilangan(Request $request)
     {
         $query = LostItem::query();
@@ -115,7 +115,7 @@ class DashboardController extends Controller
         return view('admin.rekap-kehilangan', ['items' => $query->latest()->get()]);
     }
 
-    //belom jelas
+
     public function rekapTemuan(Request $request)
     {
         $query = FoundItem::query();

@@ -10,12 +10,8 @@ class LostItem extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama_pelapor',
-        'kontak',
-        'nama_barang',
-        'deskripsi',
-        'foto',
-        'imbalan',
-        'status'
-    ];
+    'nama_pelapor', 'status_pelapor', 'kelas', 'jurusan', // Tambahan
+    'kontak', 'nama_barang', 'deskripsi', 'tanggal_kehilangan', // Tambahan
+    'foto', 'imbalan', 'status'
+];
 }

@@ -7,11 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class FoundItem extends Model
 {
     protected $fillable = [
-        'nama_pelapor',
-        'kontak',
-        'lokasi',
-        'deskripsi',
-        'foto',
-        'status'
-    ];
+    'nama_pelapor', 'status_pelapor', 'kelas', 'jurusan', // Tambahan
+    'kontak', 'lokasi', 'deskripsi', 'tanggal_penemuan', // Tambahan
+    'foto', 'status'
+];
 }
